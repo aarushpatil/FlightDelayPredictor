@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="javascript.js" defer></script>
+    <title>SkyCast</title>
+  </head>
+  <body>
+    <!-- This is the banner (cloud image) including the title -->
+
+    <div class="display">
+      <div class="banner"></div>
+    <!-- The dark blue background below the banner -->
+    <div class="page"></div>
+  </div>
+
+    <main>
+      <!-- This is the content that overlaps both the banner and background -->
+      <div class="content">
+        <div class="title">
+          <div class="proton">
+          <div class="electron"></div>
+          </div>
+
+          <div class="blur"><h1>SkyCast</h1></div>
+        </div>
+
+        <!-- The Description of the website -->
+        <div class="desc">
+          <p>
+            Introducing SkyCast, a cutting-edge website that
+            harnesses the power of advanced algorithms and real-time data to
+            predict the likelihood of flight delays. With its intuitive
+            interface and reliable predictions, SkyCast aims to
+            assist travelers in making informed decisions and minimizing
+            disruptions to their travel plans.
+          </p>
+          <img src="images/flight.png" alt="airPlane"/>
+        </div>
+        <!-- The section where the user may input their flight number -->
+        <div class="input">
+          <div class="weWill"><p>We Will Find:</p></div>
+          <div class="departure"><p>Departure</p></div>
+          <div class="arrival"><p>Arrival</p></div>
+          <div class="Ask">
+            <p>Enter Your <span>Flight Number</span></p>
+          </div>
+          <div class="gate"><p>Gate</p></div>
+          <div class="airport"><p>Airport</p></div>
+          <div class="delaychance"><p>Delay Chance</p></div>
+          <div class="search">
+            <!-- This is the form for the flight number-->
+              <input
+                type="text"
+                placeholder="Flight #"
+                name="userFN"
+                id="userInput"
+              />
+              <button type="submit" value="submit" id = "FlightNumberSubmitButton">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #000000"
+                ></i>
+              </button>
+          </div>
+        </div>
+        <!-- The data that will display after user input -->
+
+        <div class="SearchMessage">
+          <p id="errorMessage">
+            Enter your flight number so that we can conduct our calculations 🤓
+            <i
+              class="fa-solid fa-calculator fa-spin"
+              style="color: #ffffff"
+            ></i>
+          </p>
+        </div>
+
+        <div class="data">
+          <div class="flightDate1">
+            <h1 id="departurejs">0000-0-00</h1>
+            Flight Date
+          </div>
+          <div class="destination1">
+            <h1 id="fromAirportIata">IAD</h1>
+            <p id = "depAirportName">Washington Dulles International</p>
+            <i class="fa-solid fa-earth-americas" style="color: #0080c0"></i>
+            <h1 id="toAirportIata">PTY</h1>
+            <p id="arrAirportName">Tocumen International</p>
+          </div>
+          <div class="chances1"><h1 id="delayChanceForJS">60%</h1>Delay Chance</div>
+          <div class="gate1"><h1 id="fromGate">G9</h1>Gate</div>
+          <div class="departure1"><h1 id="departureTime">0000-0-00</h1>Departure</div>
+          <div class="arrival1"><h1 id="arrivalTime">0000-0-00</h1>Arrival</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
